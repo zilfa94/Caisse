@@ -1,0 +1,5 @@
+{
+  "name": "Caisse Enregistreuse QR",
+  "description": "Une application de caisse enregistreuse en ligne pour un utilisateur unique, conçue pour s'intégrer avec l'application de scan QRbot. Gérez vos produits, suivez votre stock et effectuez des ventes rapidement.",
+  "requestFramePermissions": []
+}

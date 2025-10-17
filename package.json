@@ -1,0 +1,13 @@
+{
+  "name": "caisse-qr-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm install && node api/index.js",
+    "dev": "echo 'Run dev:backend in a separate terminal. The frontend is static and can be opened directly.'"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
