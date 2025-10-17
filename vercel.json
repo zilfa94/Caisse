@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",  // <-- MODIFIÉ : On pointe vers package.json, pas index.html
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend/dist" // <-- MODIFIÉ : Le dossier de sortie de Vite est "dist"
+      }
+    },
+    {
+      "src": "backend/api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"  // <-- MODIFIÉ : On pointe vers la racine du résultat du build
+    }
+  ]
+}
